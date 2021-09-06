@@ -17,13 +17,13 @@ bughunter0 = Client(
     api_hash=os.environ["API_HASH"]
 )
 telegraph = Telegraph(
-    access_token=os.environ.get("TELEGRAPH_TOKEN", "dbc6169e9c7b4871fd681d87c80f5f5371fd59bff01dc95eca546cdb41a1")
+    access_token=os.environ.get("TELEGRAPH_TOKEN", "287f98bd373788e856207e9c495c7fa0025611dc44d17d03b0dcc720e41b")
 )
 
 
 @bughunter0.on_message(filters.command(["start"]))
 async def start(_, message: Message):
-    await message.reply_text("Join @BugHunterBots")  # Edit Your Start string here
+    await message.reply_text("Join @mrkpbots")  # Edit Your Start string here
 
 
 @bughunter0.on_message((filters.regex("https") | filters.regex("http") | filters.regex("www")) & (filters.forwarded | filters.reply | filters.private))
